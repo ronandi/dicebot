@@ -1,6 +1,12 @@
 require 'sinatra'
 require 'chatbot'
 
+DIE_SIDES = ENV['DIE_SIDES']
+
+def roll
+  1 + rand(DIE_SIDES)
+end
+
 Chatbot.configure do |config|
   config.bot_id = ENV['BOT_ID']
 end
@@ -10,5 +16,5 @@ post '/' do
 end
 
 Chatbot.command "!roll" do |message|
-  "#{message.sender} rolled a #{1 + rand(6)}"
+  "#{message.sender} rolled a #{roll} and a #{roll}"
 end
