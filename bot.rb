@@ -10,6 +10,5 @@ post '/' do
 end
 
 Chatbot.command "!roll" do |message|
-  num = 1 + rand(6)
-  "#{message.sender} rolled a #{num}"
+  "#{message.sender} rolled a #{1 + rand(6)}"
 end
