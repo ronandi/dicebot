@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'chatbot'
 
-DIE_SIDES = ENV['DIE_SIDES']
+DIE_SIDES = ENV['DIE_SIDES'].to_i
 
 def roll
   1 + rand(DIE_SIDES)
