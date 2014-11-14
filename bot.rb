@@ -7,6 +7,13 @@ def roll
   1 + rand(DIE_SIDES)
 end
 
+def flip
+  if rand(0..1) == 0
+    then return "heads"
+  else
+    return "tails"
+end
+
 Chatbot.configure do |config|
   config.bot_id = ENV['BOT_ID']
 end
@@ -18,3 +25,6 @@ end
 Chatbot.command "!roll" do |message|
   "#{message.sender} rolled a #{roll} and a #{roll}"
 end
+
+Chatbot.command "!flip" do |message|
+  "#{message.sender} flipped #{flip}."
