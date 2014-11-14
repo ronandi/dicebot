@@ -9,9 +9,10 @@ end
 
 def flip
   if rand(0..1) == 0
-    then return "heads"
+    "heads"
   else
-    return "tails"
+    "tails"
+  end
 end
 
 Chatbot.configure do |config|
