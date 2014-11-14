@@ -3,6 +3,7 @@ rvm:
 - 2.0.0
 deploy:
   provider: heroku
+  strategy: api
   api_key:
     secure: V8Qp+vLXDw1rQ4hRTw7YAueM0a9shv5HeoW0FCmDrrla+TF4ber1i7sn5+MDvHUNac1TJbsjCZzQ2Aae/qUcOo+owvMUm0EDSjqaVl8YJaPPXHr+SnsveZvcpxigckJcwT0rgB2KyGqGDe4O13thLUBHClkS/mEIUHNjcLQnmWI=
   app: fierce-everglades-7389
