@@ -28,3 +28,4 @@ end
 
 Chatbot.command "!flip" do |message|
   "#{message.sender} flipped #{flip}."
+end
